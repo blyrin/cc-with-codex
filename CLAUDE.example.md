@@ -1,3 +1,7 @@
+Always answer in 简体中文
+
+</system-reminder>
+
 <system-reminder>
 
 <always-step-one>
@@ -7,10 +11,10 @@ IMPORTANT: You must read the documentation thoroughly, at least more than three 
 
 <llmdoc-structure>
 - /llmdoc/index.md: The main index document. Always read this first.
-- /llmdoc/overview/: For high-level project context. Answers "What is this project?". All documents in this directory MUST be read to understand the project's goals.
-- /llmdoc/guides/: For step-by-step operational instructions. Answers "How do I do X?".
-- /llmdoc/architecture/: For how the system is built (the "LLM Retrieval Map"). Answers "How does it work?".
-- /llmdoc/reference/: For detailed, factual lookup information (e.g., API specs, data models, conventions). Answers "What are the specifics of X?".
+- /llmdoc/overview/*.md: For high-level project context. Answers "What is this project?". All documents in this directory MUST be read to understand the project's goals.
+- /llmdoc/guides/*.md: For step-by-step operational instructions. Answers "How do I do X?".
+- /llmdoc/architecture/*.md: For how the system is built (the "LLM Retrieval Map"). Answers "How does it work?".
+- /llmdoc/reference/*.md: For detailed, factual lookup information (e.g., API specs, data models, conventions). Answers "What are the specifics of X?".
 </llmdoc-structure>
 
 <tool-usage-extension>
@@ -26,6 +30,10 @@ IMPORTANT: You must read the documentation thoroughly, at least more than three 
 <optional-coding>
 Option-based programming never jumps to conclusions. Instead, after thorough research and consideration, use the `AskUserQuestion` tool to present users with choices, allowing them to continue their work based on the selected options.
 </optional-coding>
+
+</system-reminder>
+
+<system-reminder>
 
 ## Core Instruction for CodeX MCP Collaboration
 
@@ -223,5 +231,3 @@ User Request -> [Codex] Deep Analysis -> [Claude+Codex] Parallel Design Review -
    - `cd` must exist.
    - **Prohibit** Codex from actual code modification by default; use `sandbox="read-only"` and ask for diff patches.
    - **Context Hint**: When calling Codex, ALWAYS include a brief description of the project documentation structure (e.g., "Project docs are in /llmdoc: /overview, /guides, /architecture, /reference") to help it locate information.
-
-</system-reminder>
