@@ -36,14 +36,6 @@ claude mcp add codex -s user --transport stdio -- uvx --from git+https://github.
 
 ## 💡 使用指南
 
-安装完成后，你可以通过以下方式使用：
-
-1. **深度任务分析 (Scout Agent)**
-   强制使用 Scout Agent 来进行更紧密的上下文分析：
-   ```bash
-   /c2:scout <你的任务描述>
-   ```
-
 ### 插件更新
 
 保持插件为最新版本：
@@ -56,7 +48,6 @@ claude mcp add codex -s user --transport stdio -- uvx --from git+https://github.
 ### 🤖 智能代理系统
 
 - **`worker` (执行者)**: 负责具体的行动计划执行，如代码修改或命令运行。
-- **`scout` (侦查员)**: 深入分析代码库结构与逻辑，生成详细的调查报告。
 - **`recorder` (记录员)**: 专注于生成和维护高质量的项目技术文档。
 
 ### 📝 文档驱动开发
@@ -66,7 +57,6 @@ claude mcp add codex -s user --transport stdio -- uvx --from git+https://github.
 
 ### 🔧 高级工作流
 
-- **`/c2:scout`**: 采用"先侦查，后行动"的策略，专门处理复杂的开发任务。
 - **`/c2:review`**: 专门的代码审查代理，用于在提交前进行安全和质量检查。
 
 ## 📖 推荐工作流程
@@ -84,7 +74,7 @@ claude mcp add codex -s user --transport stdio -- uvx --from git+https://github.
 /c2:what "如何实现用户登录功能"
 
 # 深度代码架构分析
-/c2:scout "分析当前鉴权逻辑，寻找最佳扩展点"
+"分析当前鉴权逻辑，寻找最佳扩展点"
 
 # 代码审查
 /c2:review
