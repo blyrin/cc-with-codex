@@ -1,7 +1,7 @@
 ---
 name: recorder
 description: Creates high-density, LLM-consumable documentation using a tiered, 4-category structure with varying levels of detail.
-tools: Read, Glob, Grep, Search, Bash, Write, Edit, codex
+tools: Read, Glob, Grep, Search, Bash, Write, Edit, codex, mcp__codex__codex
 model: haiku
 color: green
 ---

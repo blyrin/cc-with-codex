@@ -18,22 +18,23 @@ Follow `llmdoc-structure` and read related documents thoroughly (at least 3 sour
 </llmdoc-structure>
 
 <maintenance>
-The final step of any programming task is to update the documentation using the recorder agent.
+The final step of any programming task is to update the documentation using the `c2:recorder` agent.
 </maintenance>
 
 </documentation-protocol>
 
 <agent-orchestration>
-
 <scout-agent-usage>
-- ALWAYS use `scout` for Plan Mode, Exploration, and Information Gathering.
-- Do NOT use Explore Agent or Plan Agent directly.
+- **ALWAYS `c2:scout` agent instead of Explore Agent.**
+- **ALWAYS Use `c2:scout` agent instead of Plan Agent.**
+- **ALWAYS Use `c2:scout` agent in Plan Mode, DO NOT USE plan agent!!!!**
 - Break down problems into sub-problems and investigate concurrently.
 - Workflow: Investigate (Deconstruct/Parallel Research) -> Synthesize (Combine reports) -> Iterate/Execute.
 </scout-agent-usage>
 
 <worker-agent-usage>
-Use `worker` for linear execution paths: bash commands, simple scripts, code mods, unit tests. Use when only results matter.
+- ALWAYS Use `c2:worker` for linear execution paths: bash commands, simple scripts, code mods, unit tests.
+- Use when only results matter.
 </worker-agent-usage>
 
 <option-based-coding>
@@ -58,28 +59,15 @@ Do not jump to conclusions. After research, use `AskUserQuestion` to present opt
 
 </codex-collaboration-protocol>
 
-<complexity-assessment>
-
-<simple-task>
-Criteria: No production risk, no deps, no complex coordination (e.g., logs, comments, simple queries).
-Workflow: Understand -> Direct Implementation (Claude) -> Self-check.
-Note: Only call Codex if strictly needed for location finding.
-</simple-task>
-
-<medium-task>
-Criteria: Limited risk, small config changes, module coordination. (Default if uncertain).
-Workflow: Codex Locate/Analyze -> Codex Design -> Claude Implementation -> Codex Review.
-</medium-task>
-
-<complex-task>
-Criteria: High risk, architecture changes, multi-agent coordination.
-Workflow: Parallel Deep Analysis (Claude+Codex) -> Codex Iterative Design -> Claude Phased Implementation -> Codex Strict Review (Security/Performance).
-</complex-task>
-
-</complexity-assessment>
 </system-reminder>
 
 <system-reminder>
+
+- **ALWAYS `c2:scout` agent instead of Explore Agent.**
+- **ALWAYS Use `c2:scout` agent instead of Plan Agent.**
+- **ALWAYS Use `c2:scout` agent in Plan Mode, DO NOT USE plan agent!!!!**
+- **Document-Driven Development, always prioritize reading relevant llmdocs, determine modification plans based on documentation and actual code file reading, refer to `llmdoc-structure` for the project's documentation structure**
+- **Maintain llmdocs, after completing programming tasks and confirming that the user's issue is resolved, proactively use the recorder agent to maintain the documentation system, and carefully describe the changes and reasons in the `prompt` parameter**
 
 ## Codex Tool Invocation Specification
 
@@ -125,7 +113,7 @@ Continue the previous conversation:
 - The previously returned SESSION_ID Passing SESSION_ID as a parameter
 - The context of the same session will be preserved
 
-1. Calling Guidelines
+4. Calling Guidelines
 **Must be followed**:
 - The returned SESSION_ID must be saved each time the codex tool is called for continued communication.
 - The cd parameter must point to an existing directory; otherwise, the tool will fail silently.

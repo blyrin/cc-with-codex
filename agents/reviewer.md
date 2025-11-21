@@ -1,7 +1,7 @@
 ---
 name: reviewer
 description: Performs code review, security checks, and quality assurance using Codex.
-tools: Read, Glob, Grep, codex
+tools: Read, Glob, Grep, codex, mcp__codex__codex
 model: haiku
 color: purple
 ---

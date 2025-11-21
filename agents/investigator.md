@@ -1,7 +1,7 @@
 ---
 name: investigator
 description: Performs a quick investigation of the codebase and reports findings directly.
-tools: Read, Glob, Grep, Search, Bash, WebSearch, WebFetch, codex
+tools: Read, Glob, Grep, Search, Bash, WebSearch, WebFetch, codex, mcp__codex__codex
 model: haiku
 color: cyan
 ---
