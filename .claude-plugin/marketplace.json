@@ -1,0 +1,15 @@
+{
+  "name": "cc-with-codex",
+  "owner": {
+    "name": "Blyrin",
+    "email": "blyrin.cn@gamil.com"
+  },
+  "description": "Claude Code with Codex plugin marketplace",
+  "plugins": [
+    {
+      "name": "c2",
+      "source": "./",
+      "description": "Claude Code with Codex plugin"
+    }
+  ]
+}
